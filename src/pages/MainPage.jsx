@@ -4,7 +4,7 @@ import { Link, useParams, Switch, Route, useRouteMatch } from 'react-router-dom'
 import User from "../components/User";
 import UserForm from "../components/UserForm";
 
-const ulStyle = { listStyle: "none" };
+// const ulStyle = { listStyle: "none" };
 
 
 export default function MainPage() {
@@ -54,14 +54,12 @@ export default function MainPage() {
                 {users.map(user => {
                   return (
                   <tr key={user.id}>
-                {/* <Link className="cell" to={`/${user.id}`}> */}
                     <td className="cell">{user.name.split(' ')[0]}</td>
                     <td className="cell">{user.name.split(' ')[1]}</td>
                     <td className="cell">{user.phone.split(' ')[0]}</td>
-                    {/* <td className="cell"><button>show</button></td> */}
-                    <td className="cell"><button onClick={(e) => handleDeleteUser(e)}>Delete</button></td>
-                    {/* <td className="cell"><button onClick={(e) => handleDeleteUser(e)}>Show</button></td> */}
-                {/* </Link> */}
+                    <td className="cell"><button>show</button></td>
+                    <td className="cell"><Link className="cell" to={`/${user.id}`}><button onClick={(e) => handleDeleteUser(e)}>Show</button></Link></td>
+                    <td className="cell"><button onClick={(e) => console.log(e)}>Delete</button></td>
                   </tr>
                 )
               })}
