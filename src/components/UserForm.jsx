@@ -30,7 +30,7 @@ export default function UserForm({setIsShowForm, setUsers}) {
         validateOnBlur
         onSubmit={e => {
           console.log('Submit', e);
-          setUsers(users => [...users, { id: users.length + 1, name: `${e.firstName} ${e.lastName}`, phone: e.phone }])
+          setUsers(users => [...users, { id: `${e.phone}`, name: `${e.firstName} ${e.lastName}`, phone: e.phone }])
           setIsShowForm()
         }}>
         {(...args) => (

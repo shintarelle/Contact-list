@@ -5,7 +5,7 @@ import {
   Route,
 } from "react-router-dom";
 
-import MainPage from "./pages/MainPage";
+import MainPage from "./components/MainPage";
 
 function App() {
 

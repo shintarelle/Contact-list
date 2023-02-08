@@ -5,7 +5,7 @@ export default function User({users}) {
 
   const userID = useParams();
   // console.log(users)
-  // console.log(userID);
+  console.log(userID);
   const name = users.filter(user => user.id == Number(userID.id))[0].name.split(' ')[0];
   const surname = users.filter(user => user.id == Number(userID.id))[0].name.split(' ')[1];
   const phone = users.filter(user => user.id == Number(userID.id))[0].phone.split(' ')[0];
